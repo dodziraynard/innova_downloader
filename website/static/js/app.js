@@ -7,6 +7,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
     const params = new FormData(e.target);
     url = e.target.getAttribute("action")
     loading.style.display = "block";
+    linksDiv.innerHTML = "";
 
     fetch(url, {
         method: 'post',
@@ -22,4 +23,10 @@ document.querySelector("form").addEventListener("submit", (e) => {
             alert(err.message)
             console.log(err)
         })
-})      
+})
+
+function submitForm() {
+    if (document.querySelector("form").checkValidity()) {
+        document.querySelector("#get_link").click()
+    }
+}

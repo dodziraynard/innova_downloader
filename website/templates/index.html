@@ -6,9 +6,10 @@
 <form action="{% url 'website:get_video_links' %}" method="post" class="text text-center">
     {% csrf_token %}
     <div class="download">
-        <input type="search" name="url" required pattern="https://(www\.)?youtube\.com/watch\?.*v=([a-zA-Z0-9]+).*"
-            title="Enter a youtube url.">
-        <button type="submit">get links</button>
+        <input type="search" onchange="submitForm()" name="url"
+            placeholder="https://www.youtube.com/watch?v=SKcv6GSm2dw" required
+            pattern="https://(www\.)?youtube\.com/watch\?.*v=([a-zA-Z0-9]+).*" title="Enter a youtube url.">
+        <button type="submit" id="get_link">get links</button>
     </div>
 
     <p>By using our service, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policies</a></p>
@@ -17,8 +18,8 @@
         <a href="">How to download?</a>
     </div>
     <hr>
+    <div id="link-loading">Generating download links ...</div>
     <div id="download-links">
-        <div id="link-loading">Generaring download links ...</div>
     </div>
 </form>
 {% endblock %}
