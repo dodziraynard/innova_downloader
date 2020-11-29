@@ -17,7 +17,7 @@ def signal_request_started(sender, **kwargs):
         try:
             Visit.objects.create(ip_address=ip_address, app_name=app_name,
                                  url=url, url_name=url_name)
-        except (OperationalError, IntegrityError) as err:
+        except Exception as err:
             print(err)
 
 
