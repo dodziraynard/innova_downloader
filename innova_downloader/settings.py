@@ -26,7 +26,7 @@ SECRET_KEY = '(j)6h@z@46zsy*cl#+sjgv#wbf-bf)^-3(21u)tr--rfk12vy^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["intube.pythonanywhere.com", "*"]
 
 
 # Application definition
