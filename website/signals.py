@@ -10,8 +10,11 @@ def signal_request_started(sender, **kwargs):
     environ = kwargs.get("environ")
     ip_address = environ.get("REMOTE_ADDR")
     url = environ.get("PATH_INFO")
-    url_name = resolve(url).url_name
-    app_name = resolve(url).app_name
+    try:
+        url_name = resolve(url).url_name
+        app_name = resolve(url).app_name
+    except Exception as err:
+        return
 
     if app_name != "admin" and url_name:
         try:
