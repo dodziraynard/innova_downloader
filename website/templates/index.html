@@ -1,0 +1,24 @@
+{% extends 'base_template.html' %}
+
+{% block body %}
+
+<h2 class="text text-center">Personal Youtube Video Download</h2>
+<form action="{% url 'website:get_video_links' %}" method="post" class="text text-center">
+    {% csrf_token %}
+    <div class="download">
+        <input type="search" name="url" required pattern="https://(www\.)?youtube\.com/watch\?.*v=([a-zA-Z0-9]+).*"
+            title="Enter a youtube url.">
+        <button type="submit">get links</button>
+    </div>
+
+    <p>By using our service, you agree to our <a href="">Terms of Service</a> and <a href="">Privacy Policies</a></p>
+
+    <div>
+        <a href="">How to download?</a>
+    </div>
+    <hr>
+    <div id="download-links">
+        <div id="link-loading">Generaring download links ...</div>
+    </div>
+</form>
+{% endblock %}

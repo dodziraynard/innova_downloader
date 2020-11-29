@@ -1,0 +1,140 @@
+main {
+  margin: auto;
+  padding: 10px;
+  -webkit-box-shadow: 0px 0px 30px #ddd;
+          box-shadow: 0px 0px 30px #ddd;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.3em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+}
+
+nav a {
+  margin: 5px;
+}
+
+.download {
+  width: 80%;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.download input {
+  outline: none;
+  background-color: #e0e0e0;
+  padding: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 80%;
+  font-size: 1.2em;
+}
+
+.download input:valid {
+  border: 2px solid #00ff00;
+}
+
+.download input:invalid {
+  border: 2px solid #f00;
+}
+
+.download button {
+  width: 20%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline: none;
+  border: none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #fc8f01;
+  color: white;
+}
+
+#download-links {
+  margin: 30px auto;
+}
+
+#link-loading {
+  width: 100%;
+  margin: 30px auto;
+  -webkit-animation-name: loading;
+          animation-name: loading;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  color: white;
+  padding: 5px;
+  font-weight: 600;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: none;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    background: -webkit-gradient(linear, right top, left top, from(white), to(#fc8f01));
+    background: linear-gradient(to left, white, #fc8f01);
+    width: 40%;
+  }
+  50% {
+    background: -webkit-gradient(linear, right top, left top, from(white), color-stop(#fc8f01), to(#fc8f01));
+    background: linear-gradient(to left, white, #fc8f01, #fc8f01);
+  }
+  100% {
+    background: -webkit-gradient(linear, right top, left top, from(#fc8f01), to(white));
+    background: linear-gradient(to left, #fc8f01, white);
+    width: 90%;
+  }
+}
+
+@keyframes loading {
+  0% {
+    background: -webkit-gradient(linear, right top, left top, from(white), to(#fc8f01));
+    background: linear-gradient(to left, white, #fc8f01);
+    width: 40%;
+  }
+  50% {
+    background: -webkit-gradient(linear, right top, left top, from(white), color-stop(#fc8f01), to(#fc8f01));
+    background: linear-gradient(to left, white, #fc8f01, #fc8f01);
+  }
+  100% {
+    background: -webkit-gradient(linear, right top, left top, from(#fc8f01), to(white));
+    background: linear-gradient(to left, #fc8f01, white);
+    width: 90%;
+  }
+}
+
+.image-full {
+  width: 100%;
+}
+
+footer {
+  text-align: center;
+  margin-top: 10vh;
+  background-color: #eeea;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  min-height: 10vh;
+  padding: 10px;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,18 @@
+{% extends 'base_template.html' %}
+{% block title %}Download{% endblock %}
+
+{% block body %}
+<h1>Download</h1>
+
+<h1>{{title}}</h1>
+{% for video in videos %}
+<p><a href="{{video.url}}&title={{video.title}}" download>{{video.type}} {{video.res}}</a></p>
+
+
+{% endfor %}
+
+<!-- <a href="{{video_url}}&title={{title}}" download>Download</a>
+<img src="{{thumbnail_url}}" alt="thumbnail" width="200"> -->
+
+<a href="/">Home</a>
+{% endblock %}

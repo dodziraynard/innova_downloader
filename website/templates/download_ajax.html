@@ -1,0 +1,16 @@
+<div class="row">
+    <div class="col-md-5">
+        <img src="{{thumbnail_url}}" alt="thumbnail" class="image-full">
+    </div>
+
+    <div class="col-md-7">
+        <div class="download-btn row">
+            <h2 class="text text-muted">{{title}}</h2>
+
+            {% for video in videos %}
+            <a href="{{video.url}}&title={{video.title}}" download class="btn btn-success m-1">{{video.type}}
+                {{video.res}}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
