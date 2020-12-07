@@ -19,9 +19,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
                 linksDiv.innerHTML = text;
             });
         }).catch(err => {
+            alert(err)
             loading.style.display = "none";
-            alert(err.message)
-            console.log(err)
         })
 })
 

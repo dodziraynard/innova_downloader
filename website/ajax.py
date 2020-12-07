@@ -6,6 +6,8 @@ from . utils import get_youtube_video_url
 
 def get_video_links(request):
     url = request.POST.get("url")
+    token = request.POST.get("csrfmiddlewaretoken")
+    print(token)
     try:
         videos, thumbnail_url, title = get_youtube_video_url(url)
         context = {
